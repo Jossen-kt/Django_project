@@ -37,11 +37,5 @@ pipeline {
                   python3 manage.py test''' 
             }     
         }    
-      stage('SonarQube Analysis') {
-           def scannerHome = tool 'SonarScanner';
-           withSonarQubeEnv() {
-          sh "${scannerHome}/bin/sonar-scanner"
-           }
-       }
     }
 }
