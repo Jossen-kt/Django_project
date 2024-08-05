@@ -3,9 +3,7 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                git'https://github.com/Jossen-kt/Django_project.git'
-            }    
+             checkout scm 
         }        
        
         stage('Create virtual envirnment') {
